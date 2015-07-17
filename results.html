@@ -1,8 +1,8 @@
 <html>
 <head>
-<title>Site Spider Results</title>
+<title>站点爬行报表</title>
+<meta charset="UTF-8">
 <script type="text/javascript" src="resultsOnload.js"></script>
-
 <style type="text/css">
   body {
     font-family: sans-serif
@@ -36,33 +36,12 @@
 </style>
 </head>
 <body>
-<img src="icon128.png" align="right"/>
-<h1>Site Spider Results</h1>
-
-<form>
+<form style="float:right">
 <input type="button" id="pauseSpider" value="Pause"/>
 <input type="button" id="stopSpider" value="Stop"/>
 </form>
 
-<table>
-  <tr>
-    <td>Starting on:</td>
-    <td id="startingOn"></td>
-  </tr>
-  <tr>
-    <td>Restrict to:</td>
-    <td id="restrictTo"></td>
-  </tr>
-  <tr>
-    <td>Queue:</td>
-    <td id="queue">0</td>
-  </tr>
-  <tr>
-    <td>Status:</td>
-    <td id="status">Initializing...</td>
-  </tr>
-</table>
-
+起点:<span id="startingOn"></span>限制:</td><span id="restrictTo"></span>队列:<span id="queue">0</span><br />状态:<span id="status">Initializing...</span>
 
 <table id="resultsTable">
   <colgroup>

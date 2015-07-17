@@ -24,7 +24,7 @@ var HEAD_REQUEST_TIMEOUT = 5 * 1000;
  * Title of the results page (while spidering).
  * @type {string}
  */
-var RESULTS_TITLE = 'Site Spider Results';
+var RESULTS_TITLE = '站点爬行报表';
 /**
  * List of mime types that we will load for further spidering.
  * text/plain is due to some web servers sending html using the wrong mime type.
@@ -425,7 +425,7 @@ chrome.extension.onMessage.addListener(
 function spiderInjectCallback(links, inline, scripts, url) {
     window.clearTimeout(newTabWatchDogPid);
 
-    setStatus('Scanning ' + url);
+    setStatus('扫描 ' + url);
     currentRequest.returnedURL =url;
 
     // In the case of a redirect this URL might be different than the one we
@@ -537,7 +537,7 @@ function setStatus(msg) {
             }, function(response) {
                 if (started && (response =="" || response== null)){
                     popupStop();
-                    alert('Lost access to results pane. Halting.');
+                    alert('没有权限打开结果报表，停止运行。');
                 }
             });
             chrome.tabs.sendMessage(resultsTab.id, {
