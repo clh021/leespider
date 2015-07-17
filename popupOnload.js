@@ -7,6 +7,4 @@ function clickGo() {
     chrome.extension.getBackgroundPage().popupGo();
     window.close();
 }
-  
 window.addEventListener("load",pageLoaded);
-
